@@ -1,19 +1,63 @@
 body {
+    margin: 0;
+    padding: 0;
     display: grid;
-    grid-template-areas: 
-        "head head head",
-        "side main main",
-        "footer footer footer";
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
 }
-header{
-    grid-area: head;
-}
-aside{
-    grid-area: side;
-}
+
 main{
-    grid-area: main;
+    display: flex;
 }
+
+:root {
+    --color-blue: #0F172A; /*header o footer*/
+    --color-grey: #1E293B; /*tarjetas o secciones*/
+    --color-cian: #00C2A8; /* botones y enlaces*/
+    --color-vivid-blue: #2563EB; /*titulos y hover*/
+    --color-violet: #7C3AED; /*iconos y graficos*/
+    --color-light-grey: #CBD5E1; /*texto fondos oscuros y bordes*/
+    --color-white: #F8FAFC; /*texto destacado*/
+}
+
+header{
+    background: var(--color-blue);
+    text-align: center;
+    color: var(--color-white);
+}
+
+aside{
+    background: var(--color-light-grey);
+    text-align: center;
+    ul{
+        list-style: none;
+        li{
+            padding: 5%;
+            margin-bottom: 25px;
+            margin-right: 10px;
+            border-radius: 15px;
+            background: var(--color-cian);
+            :hover{
+                color: var(--color-grey);
+                font-weight: bold;
+            }
+        }
+        li a{
+            text-decoration: none;
+            color: var(--color-blue);
+        }
+    }
+}
+
 footer{
-    grid-area: footer;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    p > a{
+        text-decoration: none;
+        color: var(--color-white);
+    }
 }
