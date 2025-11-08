@@ -1,63 +1,166 @@
+:root {
+    --color-blue: #0F172A; /* header o footer */
+    --color-grey: #1E293B; /* tarjetas o secciones */
+    --color-cian: #00C2A8; /* botones y enlaces */
+    --color-vivid-blue: #2563EB; /* títulos y hover */
+    --color-violet: #7C3AED; /* iconos y gráficos */
+    --color-light-grey: #CBD5E1; /* texto fondos oscuros y bordes */
+    --color-white: #F8FAFC; /* texto destacado */
+}
+
 body {
     margin: 0;
     padding: 0;
-    display: grid;
     min-height: 100vh;
+    display: grid;
     grid-template-rows: auto 1fr auto;
+    grid-template-columns: 250px 1fr;
+    grid-template-areas:
+        "header header"
+        "aside  main"
+        "footer footer";
+    overflow: hidden; /* evita scroll general del body */
+    font-family: sans-serif;
 }
 
-main{
-    display: flex;
-}
-
-:root {
-    --color-blue: #0F172A; /*header o footer*/
-    --color-grey: #1E293B; /*tarjetas o secciones*/
-    --color-cian: #00C2A8; /* botones y enlaces*/
-    --color-vivid-blue: #2563EB; /*titulos y hover*/
-    --color-violet: #7C3AED; /*iconos y graficos*/
-    --color-light-grey: #CBD5E1; /*texto fondos oscuros y bordes*/
-    --color-white: #F8FAFC; /*texto destacado*/
-}
-
-header{
+header {
+    grid-area: header;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background: var(--color-blue);
-    text-align: center;
     color: var(--color-white);
+    text-align: center;
+    z-index: 10;
+    padding: 10px 0;
 }
 
-aside{
+aside {
+    grid-area: aside;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
     background: var(--color-light-grey);
-    text-align: center;
-    ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    ul {
         list-style: none;
-        li{
-            padding: 5%;
-            margin-bottom: 25px;
-            margin-right: 10px;
-            border-radius: 15px;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+
+        li {
+            margin: 15px 10px;
             background: var(--color-cian);
-            :hover{
-                color: var(--color-grey);
-                font-weight: bold;
+            border-radius: 15px;
+            padding: 10px;
+            transition: 0.3s;
+
+            &:hover {
+                background: var(--color-vivid-blue);
+                a {
+                    color: var(--color-white);
+                    font-weight: bold;
+                }
+            }
+
+            a {
+                text-decoration: none;
+                color: var(--color-blue);
+                display: block;
             }
         }
-        li a{
+    }
+}
+
+main {
+    grid-area: main;
+    margin-top: 150px; 
+    margin-bottom: 50px; 
+    overflow-y: auto; 
+    padding: 20px;
+    height: calc(100vh - 120px);
+    background: var(--color-grey);
+    color: var(--color-white);
+
+    #digitalizacion, #tecnologias, #impacto{   
+        align-items: center;
+        margin-bottom: 50px;
+        div{
+            display: flex;
+            div:first-child {
+                flex: 1.5; 
+            }
+            div:last-child {
+                flex: 1;
+                    img{
+                    width: 100%; 
+                }
+            }
+        }
+        
+    }
+    #pilares, #ventajas{   
+        align-items: center;
+        margin-bottom: 50px;
+        div{
+            display: flex;
+            div:last-child {
+                flex: 1; 
+            }
+            div:first-child {
+                flex: 0.5;
+                    img{
+                    width: 100%; 
+                }
+            }
+        }
+        
+    }
+
+    section:first-child{
+        text-align: center;
+        img{
+            width: 85%;
+        }
+    }
+    
+    
+
+    h1, h2 {
+        color: var(--color-vivid-blue);
+    }
+}
+
+footer {
+    grid-area: footer;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var(--color-blue);
+    color: var(--color-white);
+    text-align: center;
+    padding: 8px 0;
+
+    p {
+        margin: 5px 0;
+
+        a {
+            color: var(--color-white);
             text-decoration: none;
-            color: var(--color-blue);
+            font-weight: bold;
+
+            &:hover {
+                color: var(--color-cian);
+            }
         }
     }
 }
 
-footer{
-    position: sticky;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    background-color: var(--color-blue);
-    color: var(--color-white);
-    p > a{
-        text-decoration: none;
-        color: var(--color-white);
-    }
-}
