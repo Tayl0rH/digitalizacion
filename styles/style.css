@@ -21,6 +21,7 @@ body {
         "footer footer";
     overflow: hidden; /* evita scroll general del body */
     font-family: sans-serif;
+    background-color: var(--color-grey);
 }
 
 header {
