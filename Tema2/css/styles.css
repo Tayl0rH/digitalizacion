@@ -6,17 +6,25 @@ con icono hamburguresas |||
 */
 
 :root {
-    --color-bg-darker-blue: #0B0F1A; /* fondos */
-    --color-bg-violet-blue: #1A2240; /* fondos */
-    --color-grey-blue: #3D465C; /* secciones */
-    --color-profesional-blue: #2E3F89; /* botones e interactivo */
-    --color-soft-blue: #5A71D7; /* botones e interactivo*/
-    --color-light-violet: #9A9CFF; /* resaltados e iconos */
-    --color-soft-cyan: #90C4FF; /* resaltado e iconos */
-    --color-white-blue: #F4F7FF; /* texto */
-    --color-ice-blue: #AFC8FF; /* texto  */
+    --color-bg-darker-blue: #0B0F1A;
+    /* fondos */
+    --color-bg-violet-blue: #1A2240;
+    /* fondos */
+    --color-grey-blue: #3D465C;
+    /* secciones */
+    --color-profesional-blue: #2E3F89;
+    /* botones e interactivo */
+    --color-soft-blue: #5A71D7;
+    /* botones e interactivo*/
+    --color-light-violet: #9A9CFF;
+    /* resaltados e iconos */
+    --color-soft-cyan: #90C4FF;
+    /* resaltado e iconos */
+    --color-white-blue: #F4F7FF;
+    /* texto */
+    --color-ice-blue: #AFC8FF;
+    /* texto  */
 }
-
 
 body {
     display: grid;
@@ -24,41 +32,82 @@ body {
     grid-auto-rows: auto 1fr auto;
     background-color: var(--color-bg-violet-blue);
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
 }
 
-header{
-    text-align: center;
+header {
+    display: block;
     color: var(--color-ice-blue);
+    margin: 0 auto;
+
+    h1 {
+        font-size: clamp(1.2rem, 3vw, 2rem);
+    }
 }
 
-aside{
-    ul{
-        justify-content: center;
-        display: flex;
-        gap: 15px;
-        list-style: none;        
-        li{
-            padding: 20px;
-            a{
-                color: var(--color-white-blue);
-                text-decoration: none;
+aside {}
+
+main {
+
+    #navigation {
+        height: fit-content;
+
+        ul {
+            justify-content: center;
+            display: flex;
+            gap: 15px;
+            list-style: none;
+
+            li {
+                padding: 20px;
+
+                a {
+                    color: var(--color-white-blue);
+                    text-decoration: none;
+                }
             }
         }
     }
-}
 
+    #indexInfo {
+        margin: auto 0;
 
-@media (max-width: 768px) {
-    body {
-        grid-template-rows: auto 1fr auto; 
+        section {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            #indexImage {
+                width: 60%;
+                margin: 0 auto;
+            }
+
+            p {
+                font-size: large;
+                text-align: center;
+                color: var(--color-bg-darker-blue);
+                border: solid 1px var(--color-white-blue);
+                border-radius: 5px;
+                padding: 1%;
+                margin: 5% 20%;
+                background: var(--color-soft-blue);
+            }
+        }
+
     }
+
 }
 
-@media (max-width: 480px) {
-    body {
-        grid-template-rows: auto 2fr auto; 
+footer{
+    border-top: solid 1px var(--color-ice-blue);
+    color: var(--color-grey-blue);
+    span{
+        display: block;
+        font-size: medium;
+        text-align: center;
+        padding: 1.5em;
     }
 }
