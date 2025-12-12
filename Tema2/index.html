@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tecnologías Habilitadoras Digitales</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js" defer></script>
 </head>
 
 <body>
@@ -15,19 +16,46 @@
 
     <main>
         <aside id="navigation">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="">5G</a></li>
-                <li><a href="">Blockchain</a></li>
-                <li><a href="">Inteligencia Artificial</a></li>
-                <li><a href="">Cobots</a></li>
-                <li><a href="">Realidad Vertual</a></li>
-            </ul>
+            <div id="pcNav">
+                <nav>
+                    <a href="index.html">Inicio</a>
+                    <a href="">5G</a>
+                    <a href="">Blockchain</a>
+                    <a href="">Inteligencia Artificial</a>
+                    <a href="">Cobots</a>
+                    <a href="">Realidad Vertual</a>
+                </nav>
+            </div>
+
+            <div id="mobileNav">
+                <button id="menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" display="none">
+                        <path fill="none" stroke="currentColor" stroke-linecap="square" stroke-width="2"
+                            d="M3 5h18M3 12h18M3 19h18" />
+                </button>
+
+                <nav id="menuExp">
+                    <a href="index.html">Inicio</a>
+                    <a href="">5G</a>
+                    <a href="">Blockchain</a>
+                    <a href="">Inteligencia Artificial</a>
+                    <a href="">Cobots</a>
+                    <a href="">Realidad Vertual</a>
+                </nav>
+                </svg>
+            </div>
+
         </aside>
         <div id="indexInfo">
             <section>
-                <img id="indexImage" src="assets/images/portada.png" alt="Imagen con empresario, pantalla con estadisticas, carpeta, móvil, 5G.">
-                <p>Las tecnologías habilitadoras son herramientas clave que impulsan la innovación y la transformación digital en empresas y organizaciones. Permiten optimizar procesos, mejorar la eficiencia y generar nuevas oportunidades de negocio. Conocer sus características y aplicaciones facilita la toma de decisiones estratégicas y ayuda a anticipar tendencias del mercado. Además, su integración adecuada potencia la competitividad y abre camino a soluciones más seguras, automatizadas y sostenibles. Estudiar y aplicar estas tecnologías es esencial para adaptarse al mundo digital actual.</p>
+                <img id="indexImage" src="assets/images/portada.png"
+                    alt="Imagen con empresario, pantalla con estadisticas, carpeta, móvil, 5G.">
+                <p>Las tecnologías habilitadoras son herramientas clave que impulsan la innovación y la transformación
+                    digital en empresas y organizaciones. Permiten optimizar procesos, mejorar la eficiencia y generar
+                    nuevas oportunidades de negocio. Conocer sus características y aplicaciones facilita la toma de
+                    decisiones estratégicas y ayuda a anticipar tendencias del mercado. Además, su integración adecuada
+                    potencia la competitividad y abre camino a soluciones más seguras, automatizadas y sostenibles.
+                    Estudiar y aplicar estas tecnologías es esencial para adaptarse al mundo digital actual.</p>
             </section>
         </div>
     </main>

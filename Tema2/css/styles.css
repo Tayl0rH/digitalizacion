@@ -1,10 +1,3 @@
-/* 
-header en pantallas pequeñas ha de ser vertical
-con icono hamburguresas |||
-
-
-*/
-
 :root {
     --color-bg-darker-blue: #0B0F1A;
     /* fondos */
@@ -45,7 +38,9 @@ header {
 
     h1 {
         font-size: clamp(1.2rem, 3vw, 2rem);
+        text-align: center;
     }
+
 }
 
 main {
@@ -53,20 +48,72 @@ main {
     #navigation {
         height: fit-content;
 
-        ul {
-            justify-content: center;
-            display: flex;
-            gap: 15px;
-            list-style: none;
-
-            li {
-                padding: 20px;
+        #pcNav {
+            nav {
+                justify-content: center;
+                display: flex;
+                gap: 15px;
+                list-style: none;
 
                 a {
+                    padding: 20px;
                     color: var(--color-white-blue);
                     text-decoration: none;
                 }
+
+                a:hover {
+                    background-color: var(--color-soft-blue);
+                }
             }
+        }
+
+        #mobileNav {
+            display: none;
+        }
+
+        @media (max-width: 480px) {
+            #pcNav {
+                display: none;
+            }
+
+            #mobileNav {
+                display: block;
+
+                nav {
+                    display: none;
+                    list-style: none;
+                    flex-direction: column;
+                    position: absolute;
+                    margin-left: 1em;
+                    gap: .5em;
+
+                    a {
+                        color: var(--color-white-blue);
+                        text-decoration: none;
+
+                    }
+
+                    a:hover {
+                        background-color: var(--color-soft-blue);
+                    }
+                }
+
+                button {
+                    margin-left: 1em;
+                    background-color: var(--color-profesional-blue);
+
+                    svg {
+                        display: block;
+                        color: var(--color-ice-blue);
+                        height: 1.9em;
+                        width: 1.9em;
+                    }
+                }
+
+            }
+
+            /*móviles*/
+
         }
     }
 
@@ -99,10 +146,11 @@ main {
 
 }
 
-footer{
+footer {
     border-top: solid 1px var(--color-ice-blue);
     color: var(--color-grey-blue);
-    span{
+
+    span {
         display: block;
         font-size: medium;
         text-align: center;
