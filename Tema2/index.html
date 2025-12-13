@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tecnologías Habilitadoras Digitales</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/main.js" defer></script>
 </head>
 
 <body>
@@ -14,40 +13,43 @@
         <h1>PT. 2.1. Web educativa sobre Tecnologías Habilitadoras Digitales</h1>
     </header>
 
-    <main>
+    <main id="indexMain">
         <aside id="navigation">
             <div id="pcNav">
                 <nav>
                     <a href="index.html">Inicio</a>
-                    <a href="">5G</a>
-                    <a href="">Blockchain</a>
-                    <a href="">Inteligencia Artificial</a>
-                    <a href="">Cobots</a>
-                    <a href="">Realidad Vertual</a>
+                    <a href="pages/five-g.html">5G</a>
+                    <a href="pages/blockchain.html">Blockchain</a>
+                    <a href="pages/artificial-inteligence.html">Inteligencia Artificial</a>
+                    <a href="pages/cobots.html">Cobots</a>
+                    <a href="pages/vr.html">Realidad Virtual</a>
                 </nav>
             </div>
 
             <div id="mobileNav">
-                <button id="menu">
-                    <svg xmlns="http://www.w3.org/2000/svg" display="none">
+                <input type="checkbox" id="menuToggle">
+
+                <label for="menuToggle" id="menuButon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path fill="none" stroke="currentColor" stroke-linecap="square" stroke-width="2"
                             d="M3 5h18M3 12h18M3 19h18" />
-                </button>
+                    </svg>
+                </label>
 
-                <nav id="menuExp">
+                <nav>
                     <a href="index.html">Inicio</a>
-                    <a href="">5G</a>
-                    <a href="">Blockchain</a>
-                    <a href="">Inteligencia Artificial</a>
-                    <a href="">Cobots</a>
-                    <a href="">Realidad Vertual</a>
+                    <a href="pages/five-g.html">5G</a>
+                    <a href="pages/blockchain.html">Blockchain</a>
+                    <a href="pages/artificial-inteligence.html">Inteligencia Artificial</a>
+                    <a href="pages/cobots.html">Cobots</a>
+                    <a href="pages/vr.html">Realidad Virtual</a>
                 </nav>
                 </svg>
             </div>
 
         </aside>
-        <div id="indexInfo">
-            <section>
+        <section id="indexInfo">
+            <div>
                 <img id="indexImage" src="assets/images/portada.png"
                     alt="Imagen con empresario, pantalla con estadisticas, carpeta, móvil, 5G.">
                 <p>Las tecnologías habilitadoras son herramientas clave que impulsan la innovación y la transformación
@@ -56,8 +58,8 @@
                     decisiones estratégicas y ayuda a anticipar tendencias del mercado. Además, su integración adecuada
                     potencia la competitividad y abre camino a soluciones más seguras, automatizadas y sostenibles.
                     Estudiar y aplicar estas tecnologías es esencial para adaptarse al mundo digital actual.</p>
-            </section>
-        </div>
+            </div>
+        </section>
     </main>
 
     <footer>
